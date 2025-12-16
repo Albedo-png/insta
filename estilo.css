@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background-color: #0f1b24;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 360px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 20px 30px;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-box input {
+  background-color: #121f2a;
+  border: 1px solid #243848;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+}
+
+.login-box input::placeholder {
+  color: #7a8b98;
+}
+
+.login-box button {
+  margin-top: 8px;
+  background-color: #1d9bf0;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #1a8cd8;
+}
+
+.forgot {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #1d9bf0;
+  text-decoration: none;
+}
+
+.create-account {
+  border: 1px solid #1d9bf0;
+  border-radius: 25px;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d9bf0;
+  text-decoration: none;
+}
+
+.logo {
+  width: 120px;
+  margin: -70px auto 10px;
+  display: block;
+}
+
+.error-msg {
+  display: none;
+  color: #f4212e;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
